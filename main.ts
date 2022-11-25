@@ -1,26 +1,28 @@
-let peeled = false
-namespace inventory {
-    
-}
-enum TropicalFruit {
-    Banana = 0,
-    Pinapple = 1,
-    Coconut = 2
-}
 namespace tropic {
     /**
-     * Pick a fruit
-     */
-    export function pick(fruit: TropicalFruit): boolean {
-        return true;
+ * Types of tropical fruit
+ */
+    enum TropicalFruit {
+        Banana = 0,
+        Pinapple = 1,
+        Coconut = 2
     }
+
     /**
-     * Peel the fruit if possible
+     * Pick some fruit and peel it.
      */
-    export function peel(fruit: TropicalFruit): boolean {
-        return (fruit == TropicalFruit.Banana);
+    namespace tropic {
+        /**
+         * Pick a fruit
+         */
+        export function pick(fruit: TropicalFruit): boolean {
+            return true;
+        }
+        /**
+         * Peel the fruit if possible
+         */
+        export function peel(fruit: TropicalFruit): boolean {
+            return (fruit == TropicalFruit.Banana);
+        }
     }
-}
-if (tropic.pick(TropicalFruit.Banana)) {
-    peeled = tropic.peel(TropicalFruit.Banana);
 }
