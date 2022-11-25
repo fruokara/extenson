@@ -1,28 +1,26 @@
-namespace tropic {
-    /**
+/**
  * Types of tropical fruit
  */
-    enum TropicalFruit {
-        Banana = 0,
-        Pinapple = 1,
-        Coconut = 2
-    }
+enum TropicalFruit {
+    Banana = 0,
+    Pinapple = 1,
+    Coconut = 2
+}
 
+/**
+ * Pick some fruit and peel it.
+ */
+namespace tropic {
     /**
-     * Pick some fruit and peel it.
+     * Pick a fruit
      */
-    namespace tropic {
-        /**
-         * Pick a fruit
-         */
-        export function pick(fruit: TropicalFruit): boolean {
-            return true;
-        }
-        /**
-         * Peel the fruit if possible
-         */
-        export function peel(fruit: TropicalFruit): boolean {
-            return (fruit == TropicalFruit.Banana);
-        }
+    export function pick(fruit: TropicalFruit): boolean {
+        return true;
+    }
+    /**
+     * Peel the fruit if possible
+     */
+    export function peel(fruit: TropicalFruit): boolean {
+        return (fruit == TropicalFruit.Banana);
     }
 }
